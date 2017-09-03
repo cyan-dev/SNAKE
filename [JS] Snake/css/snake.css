@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'guardian';
+  src: url('../fonts/Guardians.ttf');
+}
+
+body {
+  margin: 0;
+  padding : 0;
+  z-index: 1;
+  background-color: rgb(25, 25, 50);
+  background-image: url('../img/retroBackground.png');
+  background-position: top;
+  background-size: 100%;
+  text-align: center;
+}
+
+figure {
+  display: inline-block;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+img {
+  margin-bottom: 10px;
+}
+
+.class {
+  margin: auto;
+  width: 350px;
+  font-size: 12px;
+}
+
+#menu, 
+#pause {
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgb(25,25,50);
+  border: 2px solid deeppink;
+  z-index: 3;
+}
+
+#shadow {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25,25,50, 0.8);
+}
+
+#menu {
+  width: 600px;
+  height: 800px;
+}
+
+#pause {
+  width: 380px;
+  height: 150px;
+}
+
+h1.inpause {
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 350px
+}
+
+p.inpause {
+  margin: auto;
+  width: 350px;
+  font-size: 12px;
+}
+
+p, h1, h2, li, figcaption, span{
+  color: cyan;
+  text-shadow:
+    2px 2px deeppink,
+    2px -2px deeppink,
+    -2px 2px deeppink,
+    -2px -2px deeppink;
+  font-family: guardian;
+}
+
+h1 {
+  font-size: 50px;
+  width: 500px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 25px;
+  width: 266px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#score {
+  float: left;
+  text-align: left;
+}
+
+#last {
+  float: left;
+  text-align: center;
+}
+
+#best {
+  float: right;
+  text-align: right;
+}
+
+#interface {
+  width: 800px;
+  margin: auto;
+}
+
+/* no scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* listes dans le menu*/
+ul, li {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+li {
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+#difficulty, 
+#audio {
+  margin: auto;
+}
+
+span.notActivated
+{
+  color: rgb(25,25,50);
+}
+
+span.activated
+{
+  color: deeppink;
+}
+
+.inhud {
+  color: deeppink;
+  text-shadow:
+    2px 2px cyan,
+    2px -2px cyan,
+    -2px 2px cyan,
+    -2px -2px cyan;
+  font-family: guardian;
+ }
+
+.indifficulty,
+.inaudio {
+  text-shadow:
+    2px 2px cyan,
+    2px -2px cyan,
+    -2px 2px cyan,
+    -2px -2px cyan;
+  font-family: guardian;
+}
+
+.ingo,
+.indifficulty, 
+.inaudio {
+  display: inline-block;
+  min-width: 140px;
+}
+
+.indifficulty:hover, 
+.inaudio:hover {
+  color: deeppink;
+  cursor: pointer;
+}
+
+
+
+.menudiv {
+  padding-bottom: 20px;
+}
+
+.separator {
+  margin: auto;
+  width: 300px;
+  height: 0;
+  border-top-style: solid;
+  border-top-size: 1px;
+  border-top-color: deeppink;
+  border-bottom-style: solid;
+  border-bottom-size: 1px;
+  border-bottom-color: cyan; 
+}
+
+#fix1 {
+  margin-top: 8px;
+}

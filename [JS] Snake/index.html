@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/snake.css">
+    <link rel="icon" type="image/gif" href="img/icon.png">
+    <meta charset="UTF-8">
+    <title>snake</title>
+
+  </head>
+  
+  <body>
+  <div id="shadow">
+    
+  </div>
+    <!-- sons du jeu -->
+    <audio id="mainTheme" src="sounds/mainTheme.mp3"></audio> <!-- Musique -->
+    <audio id="eatSound" src="sounds/eat.mp3"></audio>  <!-- son nourriture -->
+    <audio id="dieSound" src="sounds/die.mp3"></audio>  <!-- son de mort -->
+
+    <h1>SNAKE</h1>
+    <!-- Interface de score -->
+    <div id="interface">
+      <!-- Score de la partie en cours -->
+      <p id="score">Score<br><span class="inhud" id="scoreNumber"></span></p>
+      <!-- Score de la dernière partie terminée -->
+      <p id="last">Last<br><span class="inhud" id="lastNumber"></span></p>
+      <!-- Meilleur score de la session en cours -->
+      <p id="best">Best<br><span class="inhud" id="bestNumber"></span></p>
+    </div>
+
+    <!-- Menu pause -->
+    <div id="pause">
+      <h1 class="inpause">Pause</h1>
+      <p class="inpause">Press enter to display menu<br>
+                          Press space to continue</p>
+    </div>
+    
+    <!-- Menu principal -->
+    <div id="menu">
+
+      <!-- Indication de start -->
+      <div class="menudiv">
+        <h1>GO!!</h1>
+        <span class="ingo">Press enter to start a new game</span><br>
+        <span class="ingo">and apply selected difficulty</span><br>
+        <span class="ingo" id="fix1">Press space to continue</span>
+      </div>
+
+      <!-- CECI EST UN SEPARATEUR -->
+      <div class="separator"></div>
+      <!-- CECI EST UN SEPARATEUR -->
+
+      <!-- Gestionnaire de difficulté -->
+      <div class="menudiv">
+        <h2>Difficulty</h2>
+        <div id="difficulty">
+          <span id="easy" class="indifficulty notActivated">
+          Easy</span>                                           <!-- easy -->
+          <span id="medium" class="indifficulty activated">
+          Medium</span>                                         <!-- medium -->
+          <span id="hard" class="indifficulty notActivated">
+          Hard</span>                                           <!-- hard -->
+        </div>
+      </div>
+
+      <!-- CECI EST UN SEPARATEUR -->
+      <div class="separator"></div>
+      <!-- CECI EST UN SEPARATEUR -->
+
+      <!-- Gestionaire d'audio -->
+      <div class="menudiv">
+        <h2>Audio</h2>
+        <div id="audio">
+          <span id="music" class="inaudio activated">
+          Music</span>                                  <!-- Music -->
+          <span id="sound" class="inaudio activated">
+          Sound</span>                                  <!-- Sounds -->
+        </div>
+      </div>
+
+      <!-- CECI EST UN SEPARATEUR -->
+      <div class="separator"></div>
+      <!-- CECI EST UN SEPARATEUR -->
+
+      <!-- Affichage des controles -->
+      <div class="menudiv">
+        <h2>Controls</h2>
+
+        <figure> <!-- Fleches directionelles [DIRECTIONS] -->
+          <img src="img/fleches.png" alt="directions">
+          <figcaption class="legende">directions</figcaption>
+        </figure>
+
+        <figure> <!-- Barre d'espace [PAUSE] -->
+          <img src="img/spaceBar.png" alt="pause">
+          <figcaption class="legende">pause</figcaption>
+        </figure>
+      </div>
+
+      <!--  
+        SOON
+        UN LEADERBOARD
+      -->
+
+    </div>
+
+    <div id="game">
+      <!-- C'est ici que le game se passe -->
+    </div>
+
+    <!-- *********
+    SCRIPTS
+    ********* -->
+    
+      <!-- Fonction de gestion de tableau en 2d -->
+      <script src="js/tools/2dArray.js"></script>
+
+      <!-- *********
+      CLASSES
+      ********* -->
+      
+      <!-- Classe cell.js : Gère les cellules de la grille -->
+      <script src="js/class/Cell.js"></script>
+      <!-- Classe Food.js : Gère la nourriture -->
+      <script src="js/class/Food.js"></script>
+      <!-- Classe Snake.js : Gère le serpent -->
+      <script src="js/class/Snake.js"></script>
+
+      <!-- *********
+      JS PRINCIPAL
+      ********* -->
+      <script src="js/game.js"></script>
+
+  </body>
+
+</html>

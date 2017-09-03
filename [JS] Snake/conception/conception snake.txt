@@ -1,0 +1,41 @@
+﻿Prérequis :
+  * Taille de la grille :	20x20
+  * Taille du serpent de base :	3
+  * direction de base : 	droite
+
+Début :
+  
+
+Exemple : 
+  On dessine un carré aux coordonnées 10x10 (au centre de la grille)
+  On enregistre cette coordonnées dans un tableau de la taille du serpent (case 0)
+  On dessine un carré aux coordonnées 11x10
+  On enregistre cette coordonnées dans le tableau (case 1)
+  On dessine un carré aux coordonnées 12x10
+  On enregistre cette coordonnées dans le tableau (case 2)
+
+/***********************
+LE SERPENT EST ENTIER
+***********************/
+//La coordonnée la plus récente se trouve dans la case 2 !
+
+  On crée un tableau de la taille du serpent
+  On entre dans chaque case du tableau les coordonées d'une cellule du serpent 
+    snake = {[cell = new cell(10x10)][cell = new cell(11x10)][cell(12x10)]}
+
+
+
+
+
+var taille = 3;
+var cell;
+var snake = [];
+
+for(let i = 0; i < taille; i++) {
+  cell = new cell(10+i, 10);
+  snake.push(cell);
+}
+
+
+
+  
