@@ -1,28 +1,26 @@
+/***************************************************************
+* Fichier : Food.js (object declaration)
+* Projet  : [JS] Snake
+* 
+* Dev.    : Cyril ESCLASSAN & Dylan CARON
+* Update  : 04/09/2017
+*   => Mise à jour du commentary général
+***************************************************************/
 "use strict";
 
 function Food(environement) {
-/***********
-ATTRIBUTS
-***********/
+
+//------------------
+// ATTRIBUTS
   
-  /*  
-  'environement' correspond à la grille dans laquelle le serpent existe
-  'environement' est passé en paramètre
-  */
   this.environement = environement;
 
-  /*
-
-  */
   this.cell;
 
 
-/***********
-METHODES
-***********/
-  /*
-
-  */
+//------------------
+// MÉTHODES
+  
   this.generate = function() {
     if(this.cell !== undefined) {
       this.cell.setIsFood(false);
