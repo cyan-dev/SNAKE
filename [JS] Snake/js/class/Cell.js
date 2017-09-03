@@ -33,24 +33,10 @@ function Cell(i, j) {
 //------------------
 // ATTRIBUTS
 
-  /*
-  'i' est la première coordonnées qui définie le numéro de la cellule
-  selon l'axe x (la colone)
-  'i' est passé en paramètre
-  */
   this.i = i;
 
-  /*
-  'j' est la seconde coordonnées qui définie le numéro de la cellule
-  selon l'axe y (la ligne)
-  'j' est passé en paramètre
-  */
   this.j = j;
 
-  /*
-  'isSnake' définie si oui ou non le serpent est présent dans cette cellule
-  de base, isSnake = false (Le serpent n'est pas dans la cellule)
-  */
   this.isSnake = false;
 
   this.isFood = false;
@@ -154,11 +140,41 @@ function Cell(i, j) {
     }
   }
 
+  
+  /*
+  * Cell.setIsHead(isHead : bool) : undefined
+  * 
+  * isHead : bool
+  *   => isHead indique si la celulle est la tête du serpent ou non
+  *
+  * return : undefined
+  *   => aucun retour n'est spécifié
+  *
+  * Fonctionement :
+  * DEBUT
+  *   Cell.isHead prend la valeur de isHead
+  * FIN
+  */
   this.setIsHead = function(isHead) {
     this.isHead = isHead;
     
   }
 
+
+  /*
+  * Cell.setIsFood(isFood : bool) : undefined
+  * 
+  * isHead : bool
+  *   => isFood indique si la celulle est de la nourriture ou non
+  *
+  * return : undefined
+  *   => aucun retour n'est spécifié
+  *
+  * Fonctionement :
+  * DEBUT
+  *   Cell.isFood prend la valeur de isFood
+  * FIN
+  */
   this.setIsFood = function(isFood) {
     this.isFood = isFood;
   }
