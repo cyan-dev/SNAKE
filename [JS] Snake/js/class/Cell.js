@@ -3,7 +3,7 @@
 * Projet  : [JS] Snake
 * 
 * Dev.    : Cyril ESCLASSAN & Dylan CARON
-* Update  : 03/09/2017
+* Update  : 05/09/2017
 *   => Mise à jour du commentary général
 ***************************************************************/
 "use strict";
@@ -33,14 +33,32 @@ function Cell(i, j) {
 //------------------
 // ATTRIBUTS
 
+  /*
+  * Cell.i correspond aux coordonées i (horizontale) (unitée : case)
+  */
   this.i = i;
 
+  /*
+  * Cell.j correspond aux coordonées j (verticale) (unitée : case)
+  */
   this.j = j;
 
+  /*
+  * Cell.isSnake est l'état booléen
+  * indiquant si la celulle est une celulle du snake
+  */
   this.isSnake = false;
 
+  /*
+  * Cell.isFood est l'état booléen
+  * indiquant si la celulle est une food
+  */
   this.isFood = false;
 
+  /*
+  * Cell.isHead est l'état booléen
+  * indiquant si la celulle est la tête du snake
+  */
   this.isHead = false;
 
 
@@ -114,25 +132,26 @@ function Cell(i, j) {
   }
 
 
-  /*
-  * Cell.setIsSnake(isSnake : bool) : int
-  *
-  * isSnake : bool
-  *   => isSnake indique si la case fait parti du serpent ou non
-  *
-  * return : int
-  *   => retourne -1 si la celulle que l'on veux donner au serpent
-  *   fait déjà parti du serpent
-  *
-  * Fonctionement :
-  * DEBUT
-  *   Si la celulle fait déjà parti du serpent :
-  *     on retourne simplement -1
-  *   Sinon :
-  *     Cell.isSnake prend la valeur de isSnake
-  * FIN
-  */
   this.setIsSnake = function(isSnake) {
+    /*
+    * Cell.setIsSnake(isSnake : bool) : int
+    *
+    * isSnake : bool
+    *   => isSnake indique si la case fait parti du serpent ou non
+    *
+    * return : int
+    *   => retourne -1 si la celulle que l'on veux donner au serpent
+    *   fait déjà parti du serpent
+    *
+    * Fonctionement :
+    * DEBUT
+    *   Si la celulle fait déjà parti du serpent :
+    *     on retourne simplement -1
+    *   Sinon :
+    *     Cell.isSnake prend la valeur de isSnake
+    * FIN
+    */
+
     if(this.isSnake && isSnake) {
       return -1;
     } else {
@@ -140,42 +159,41 @@ function Cell(i, j) {
     }
   }
 
-  
-  /*
-  * Cell.setIsHead(isHead : bool) : undefined
-  * 
-  * isHead : bool
-  *   => isHead indique si la celulle est la tête du serpent ou non
-  *
-  * return : undefined
-  *   => aucun retour n'est spécifié
-  *
-  * Fonctionement :
-  * DEBUT
-  *   Cell.isHead prend la valeur de isHead
-  * FIN
-  */
+
   this.setIsHead = function(isHead) {
+    /*
+    * Cell.setIsHead(isHead : bool) : undefined
+    * 
+    * isHead : bool
+    *   => isHead indique si la celulle est la tête du serpent ou non
+    *
+    * return : undefined
+    *   => aucun retour n'est spécifié
+    *
+    * Fonctionement :
+    * DEBUT
+    *   Cell.isHead prend la valeur de isHead
+    * FIN
+    */
     this.isHead = isHead;
-    
   }
 
 
-  /*
-  * Cell.setIsFood(isFood : bool) : undefined
-  * 
-  * isHead : bool
-  *   => isFood indique si la celulle est de la nourriture ou non
-  *
-  * return : undefined
-  *   => aucun retour n'est spécifié
-  *
-  * Fonctionement :
-  * DEBUT
-  *   Cell.isFood prend la valeur de isFood
-  * FIN
-  */
   this.setIsFood = function(isFood) {
+    /*
+    * Cell.setIsFood(isFood : bool) : undefined
+    * 
+    * isHead : bool
+    *   => isFood indique si la celulle est de la nourriture ou non
+    *
+    * return : undefined
+    *   => aucun retour n'est spécifié
+    *
+    * Fonctionement :
+    * DEBUT
+    *   Cell.isFood prend la valeur de isFood
+    * FIN
+    */
     this.isFood = isFood;
   }
 }
