@@ -1,14 +1,22 @@
-"use strict";
-/*
+/***************************************************************
+* Fichier : game.js (main JS)
+* Projet  : [JS] Snake
+*
+* arborescence :
 * js
-* |- game.js
+* |- game.js *
 * |- class
 * |  |- Cell.js
 * |  |- Food.js
 * |  |- Snake.js
 * |- tools
 * |  |- 2dArray.js
-*/
+* 
+* Dev.    : Cyril ESCLASSAN & Dylan CARON
+* Update  : 04/09/2017
+*   => Mise à jour du commentary général
+***************************************************************/
+"use strict";
 
 //==============================
 //====  VARIABLES GLOBALES  ====
