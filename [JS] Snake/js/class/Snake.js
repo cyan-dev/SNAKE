@@ -10,8 +10,30 @@
 
 function Snake(environement, cell) {
 
-
-
+/* 
+* Objet Snake
+*
+* Constructeur
+* Snake(environement : array of Cell object, cell : Cell object) : Snake object
+*
+* Methodes
+* Snake.stockDir(direction : int) : null
+* Snake.changeDir(null) : null
+* Snake.move(null) : null
+* Snake.addQueue(cell : Cell object) : null
+* Snake.restart(null) : null
+*
+* Attributs
+* Snake.environement : array of Cell object
+* Snake.cell : Cell object
+* Snake.direction : int
+* Snake.bufferDir : array of int
+* Snake.tailleQueue : int
+* Snake.queue : array of Cell object
+*
+* Using classes
+* Cell.js => Cell object
+*/
 
 //------------------
 // ATTRIBUTS

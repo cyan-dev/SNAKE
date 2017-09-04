@@ -1,4 +1,14 @@
 "use strict";
+/*
+* js
+* |- game.js
+* |- class
+* |  |- Cell.js
+* |  |- Food.js
+* |  |- Snake.js
+* |- tools
+* |  |- 2dArray.js
+*/
 
 //==============================
 //====  VARIABLES GLOBALES  ====
