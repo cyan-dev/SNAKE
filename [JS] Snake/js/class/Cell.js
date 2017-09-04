@@ -3,7 +3,7 @@
 * Projet  : [JS] Snake
 * 
 * Dev.    : Cyril ESCLASSAN & Dylan CARON
-* Update  : 05/09/2017
+* Update  : 04/09/2017
 *   => Mise à jour du commentary général
 ***************************************************************/
 "use strict";
@@ -45,19 +45,19 @@ function Cell(i, j) {
 
   /*
   * Cell.isSnake est l'état booléen
-  * indiquant si la celulle est une celulle du snake
+  * indiquant si la cellule est une cellule du snake
   */
   this.isSnake = false;
 
   /*
   * Cell.isFood est l'état booléen
-  * indiquant si la celulle est une food
+  * indiquant si la cellule est une food
   */
   this.isFood = false;
 
   /*
   * Cell.isHead est l'état booléen
-  * indiquant si la celulle est la tête du snake
+  * indiquant si la cellule est la tête du snake
   */
   this.isHead = false;
 
@@ -87,18 +87,18 @@ function Cell(i, j) {
     *   application du contour à la cellule de coordonées situé à (x, y)
     *       de taille scl * scl
     *
-    *   Si la celulle est celle ou est le serpent:
+    *   Si la cellule est celle ou est le serpent:
     *     définition de la couleur de remplissage à "cyan"
-    *   Sinon, si la celulle est celle ou se trouve la nouriture:
+    *   Sinon, si la cellule est celle ou se trouve la nouriture:
     *     définition de la couleur de remplissage à "deeppink"
     *   Sinon:
     *     définition de la couleur de remplissage à "rgb(25,25,50)"
     *
-    *   application du remplissage de la celulle situé à (x, y)
+    *   application du remplissage de la cellule situé à (x, y)
     *       de taille scl * scl
     *
-    *   Si la celulle est la tête du serpent:
-    *     définition d'un cercle au millieu de la celulle situé à (x, y)
+    *   Si la cellule est la tête du serpent:
+    *     définition d'un cercle au millieu de la cellule situé à (x, y)
     *         de rayon 10
     *     définition de la couleur de remplissage à "deeppink"
     *     application du cercle rempli
@@ -140,12 +140,12 @@ function Cell(i, j) {
     *   => isSnake indique si la case fait parti du serpent ou non
     *
     * return : int
-    *   => retourne -1 si la celulle que l'on veux donner au serpent
+    *   => retourne -1 si la cellule que l'on veux donner au serpent
     *   fait déjà parti du serpent
     *
     * Fonctionement :
     * DEBUT
-    *   Si la celulle fait déjà parti du serpent :
+    *   Si la cellule fait déjà parti du serpent :
     *     on retourne simplement -1
     *   Sinon :
     *     Cell.isSnake prend la valeur de isSnake
@@ -165,7 +165,7 @@ function Cell(i, j) {
     * Cell.setIsHead(isHead : bool) : undefined
     * 
     * isHead : bool
-    *   => isHead indique si la celulle est la tête du serpent ou non
+    *   => isHead indique si la cellule est la tête du serpent ou non
     *
     * return : undefined
     *   => aucun retour n'est spécifié
@@ -184,7 +184,7 @@ function Cell(i, j) {
     * Cell.setIsFood(isFood : bool) : undefined
     * 
     * isHead : bool
-    *   => isFood indique si la celulle est de la nourriture ou non
+    *   => isFood indique si la cellule est de la nourriture ou non
     *
     * return : undefined
     *   => aucun retour n'est spécifié

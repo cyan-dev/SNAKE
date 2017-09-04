@@ -3,7 +3,7 @@
 * Projet  : [JS] Snake
 * 
 * Dev.    : Cyril ESCLASSAN & Dylan CARON
-* Update  : 05/09/2017
+* Update  : 04/09/2017
 *   => Mise à jour du commentary général
 ***************************************************************/
 "use strict";
@@ -33,7 +33,7 @@ function Food(environement) {
   this.environement = environement;
 
   /*
-  * Food.cell correspond à la celulle qui apartient à Food
+  * Food.cell correspond à la cellule qui apartient à Food
   */
   this.cell;
 
@@ -54,14 +54,14 @@ function Food(environement) {
     * Fonctionement:
     * DEBUT
     *   Si Food.cell existe déjà :
-    *     on indique que la cell.isFood n'est plus une celulle food
+    *     on indique que la cell.isFood n'est plus une cellule food
     *
-    *   Tant que Food.cell est une celulle snake OU 
-    *       que Food.cell est une celulle food :
-    *     Food.cell prend la valeur d'une celulle pioché aléatoirement
+    *   Tant que Food.cell est une cellule snake OU 
+    *       que Food.cell est une cellule food :
+    *     Food.cell prend la valeur d'une cellule pioché aléatoirement
     *         dans Food.environement
     *
-    *   Food.cell devient une celulle food
+    *   Food.cell devient une cellule food
     * FIN
     */
     if(this.cell !== undefined) {
