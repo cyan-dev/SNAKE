@@ -1,9 +1,20 @@
+/***************************************************************
+* Fichier : Snake.js (object declaration)
+* Projet  : [JS] Snake
+* 
+* Dev.    : Cyril ESCLASSAN & Dylan CARON
+* Update  : 04/09/2017
+*   => Mise à jour du commentary général
+***************************************************************/
 "use strict";
 
 function Snake(environement, cell) {
-/***********
-ATTRIBUTS
-***********/
+
+
+
+
+//------------------
+// ATTRIBUTS
 
   /*  
   'environement' correspond à la grille dans laquelle le serpent existe.
@@ -51,9 +62,8 @@ ATTRIBUTS
   this.queue = [];
 
 
-/***********
-METHODES
-***********/
+//------------------
+// METHODES
 
   /*
   'stockDir(direction)' permet de stocker la direction demandée.
