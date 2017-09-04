@@ -38,48 +38,48 @@ function Snake(environement, cell) {
 //------------------
 // ATTRIBUTS
 
-  /*  
-  'environement' correspond à la grille dans laquelle le serpent existe.
-  'environement' est passé en paramètre
+  /*
+  * Snake.environement correspond à la grille dans laquelle le serpent existe.
   */
   this.environement = environement;
 
   /*
-  'cell' correspond à la cellule dans laquelle est la tête du serpent
-  'cell' est passé en paramètre
+  * Snake.cell correspond à la cellule dans laquelle est la tête du serpent
   */
   this.cell = cell;
 
-  //On précise à la cellule qu'elle contient le seprent
+  /*
+  * On précise à la cellule qu'elle contient le seprent
+  */
   this.cell.setIsSnake(true);
   this.cell.setIsHead(true);
 
   /*
-  'direction' correspond à la direction du serpent.
-  'direction' peut être :
-   0 : GAUCHE
-   1 : HAUT
-   2 : DROITE
-   3 : BAS
-  de base, 'direction' = 2 (DROITE)
+  * Snake.direction correspond à la direction du serpent.
+  * Snake.direction peut être :
+  *  0 : GAUCHE
+  *  1 : HAUT
+  *  2 : DROITE
+  *  3 : BAS
+  * de base, Snake.direction = 2 (DROITE)
   */
   this.direction = 2;
 
   /*
-  'stockDir' est un tableau pouvant stocker jusqu'à 2 directions
-  C'est dans ce tableau que va piocher sa direction, 'changeDir(direction)'
-  à la case 0
+  * Snake.bufferDir est un tableau pouvant stocker jusqu'à 2 directions
+  * C'est dans ce tableau que va piocher sa direction, 
+  * Snake.changeDir(direction) à la case 0
   */
   this.bufferDir = [];
 
   /*
-  'tailleQueue' correspond à la taille de la queue du serpent
+  * Snake.tailleQueue correspond à la taille de la queue du serpent
   */
   this.tailleQueue = 2;
 
   /*
-  'queue' est un tableau contenant les cellules 
-  correspondant à la queue du serpent
+  * Snake.queue est un tableau contenant les cellules 
+  * correspondant à la queue du serpent
   */
   this.queue = [];
 
@@ -87,10 +87,22 @@ function Snake(environement, cell) {
 //------------------
 // METHODES
 
-  /*
-  'stockDir(direction)' permet de stocker la direction demandée.
-  */
   this.stockDir = function(direction) {
+    /*
+    * Snake.stockDir(direction : int) : null 
+    * 
+    * direction : int
+    *   => bon bah c'est la direction quoi...
+    *
+    * return : undefined
+    *   => aucun retour n'est spécifié
+    *
+    * Fonctionnement :
+    * DEBUT
+    *   Si la taille de Snake.bufferDir est inférieure à 2 :
+          Snake.bufferDir prend direction en dernière valeur
+    * FIN
+    */
     if(this.bufferDir.length < 2) {
       this.bufferDir.push(direction);
     }
@@ -100,6 +112,26 @@ function Snake(environement, cell) {
   'changeDir(direction)' permet de changer la direction du serpent
   */
   this.changeDir = function() {
+    /*
+    * Snake.changeDir(undefined) : undefined
+    * 
+    * param : undefined
+    *   => aucun paramètre n'est spécifié
+    *
+    * return : undefined
+    *   => aucun retour n'est spécifié
+    *
+    * fonctionnement :
+    * DEBUT
+    *   Si la taille de Snake.bufferDir est supérieure à 0 :
+    *     Si la première direction de Snake.bufferDir n'est pas l'opposé
+    *         de Snake.direction :
+    *       Snake.direction prend la première valeur de Snake.bufferDir
+    *       La première valeur de Snake.bufferDir est supprimé
+    *     Sinon :
+    *       La première valeur de Snake.bufferDir est supprimé
+    * FIN
+    */
     if(this.bufferDir.length > 0) {
       if(this.bufferDir[0] - this.direction !== 2 
           && this.bufferDir[0] - this.direction !== -2) {
@@ -114,6 +146,21 @@ function Snake(environement, cell) {
   'move()' permet de déplacer le serpent d'une case en fonction de direction
   */
   this.move = function() {
+    /*
+    * Snake.move(undefined) : undefined
+    * 
+    * param : undefined
+    *   => aucun paramètre n'est spécifié
+    *
+    * return : undefined
+    *   => aucun retour n'est spécifié
+    *
+    * fonctionnement :
+    * DEBUT
+    *   
+    * FIN
+    */
+
     this.cell.setIsSnake(false);
     this.cell.setIsHead(false);
     this.addQueue(this.cell);
