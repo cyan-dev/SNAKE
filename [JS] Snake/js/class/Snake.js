@@ -100,7 +100,7 @@ function Snake(environement, cell) {
     * Fonctionnement :
     * DEBUT
     *   Si la taille de Snake.bufferDir est inférieure à 2 :
-          Snake.bufferDir prend direction en dernière valeur
+    *     Snake.bufferDir prend direction en dernière valeur
     * FIN
     */
     if(this.bufferDir.length < 2) {
@@ -108,9 +108,7 @@ function Snake(environement, cell) {
     }
   }
 
-  /*
-  'changeDir(direction)' permet de changer la direction du serpent
-  */
+
   this.changeDir = function() {
     /*
     * Snake.changeDir(undefined) : undefined
@@ -142,9 +140,7 @@ function Snake(environement, cell) {
     }
   }
 
-  /*
-  'move()' permet de déplacer le serpent d'une case en fonction de direction
-  */
+
   this.move = function() {
     /*
     * Snake.move(undefined) : undefined
@@ -157,7 +153,26 @@ function Snake(environement, cell) {
     *
     * fonctionnement :
     * DEBUT
-    *   
+    *   Snake.cell n'est pas/plus une cellule du snake
+    *   Snake.cell n'est pas/plus la tête du snake
+    *   ajoute Snake.cell au tableau Snake.queue par le biais de 
+    *       la methode Snake.addQueue(...)
+    *
+    *   Suivant Snake.direction :
+    *     dans tous les Cas :
+    *       Si le snake n'avance pas vers le bord de la grille :
+    *         le snake avance d'une case dans la direction Snake.direction
+    *       Sinon :
+    *         le snake meurt, on lance une nouvelle partie avec
+    *             la methode Snake.restart()
+    *
+    *   Si le snake repasse par une case qui lui appartient :
+    *     le snake meurt, on lance une nouvelle partie avec
+    *         la methode Snake.restart()
+    *   Sinon :
+    *     Snake.cell devient la tête du snake
+    *
+    *   actualisation de la grille
     * FIN
     */
 
@@ -225,31 +240,51 @@ function Snake(environement, cell) {
 
         }
       break;
-    }
+    } // fin du switch
 
     if(this.cell.setIsSnake(true) === -1) {
       this.restart();
     } else {
       this.cell.setIsHead(true);
     }
-    //Actualisation de la grille
+
     this.environement.forEach(function(cell) {
       cell.show(ctx, scl);
     });
   }
 
+
   this.addQueue = function(cell) {
+    /*
+    * Snake.addQueue(cell : Cell object) : undefined
+    * 
+    * cell : Cell object
+    *   => cellule à ajouter à Snake.queue
+    * 
+    * return : undefined
+    *   => aucun retour n'est spécifié
+    *
+    * Fonctionnement :
+    * DEBUT
+    *   Si la taille de Snake.queue est supérieure ou égale 
+    *       à Snake.tailleQueue :
+    *     la première valeur de Snake.queue n'est plus une cellule du snake
+    *     la première valeur de Snake.queue est supprimé
+    *
+    *   Snake.queue prend cell en dernière valeur
+    *   cell devient une cellule de snake
+    * FIN
+    */
     if(this.queue.length >= this.tailleQueue) {
       this.queue[0].setIsSnake(false);
       this.queue.shift();
-    } 
-    this.queue.push(cell);
-
-    if(cell.setIsSnake(true) === -1) {
-      this.restart();
     }
+
+    this.queue.push(cell);
+    cell.setIsSnake(true);
   }
 
+  
   this.restart = function() {
     mainTheme.pause();
     mainTheme.load();
