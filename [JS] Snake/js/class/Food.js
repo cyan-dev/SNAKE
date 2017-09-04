@@ -45,7 +45,7 @@ function Food(environement) {
     /*
     * Food.generate(undefined) : undefined
     *
-    * undefined
+    * param : undefined
     *   => aucun paramètre n'est spécifié
     *
     * return : undefined
