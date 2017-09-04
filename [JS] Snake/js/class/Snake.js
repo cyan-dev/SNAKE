@@ -153,8 +153,8 @@ function Snake(environement, cell) {
     *
     * fonctionnement :
     * DEBUT
-    *   Snake.cell n'est pas/plus une cellule du snake
-    *   Snake.cell n'est pas/plus la tête du snake
+    *   Snake.cell n'est plus une cellule du snake
+    *   Snake.cell n'est plus la tête du snake
     *   ajoute Snake.cell au tableau Snake.queue par le biais de 
     *       la methode Snake.addQueue(...)
     *
@@ -284,8 +284,48 @@ function Snake(environement, cell) {
     cell.setIsSnake(true);
   }
 
-  
+
   this.restart = function() {
+    /*
+    * Snake.restart(undefined) : undefined
+    *
+    * param : undefined
+    *   => aucun paramètre n'est spécifié
+    *
+    * return : undefined
+    *   => aucun retour n'est spécifié
+    *
+    * Fonctionnement :
+    * DEBUT
+    *   stope la musique
+    *   joue le son de mort
+    *   
+    *   Snake.cell n'est plus une cellule du snake
+    *   Snake.cell n'est plus la tête du snake
+    *   met le snake au centre de la grille
+    *
+    *   suppression de la queue du snake
+    *
+    *   Si la taille du snake dépasse 10 cellules :
+    *     multiplication du score par la taille du snake sur 10
+    *
+    *   Si le score est plus élevé que le meilleur score :
+    *     affichage du nouveau meilleur score
+    *
+    *   affichage du dernier score obtenu
+    *   reset de l'affichage du score
+    *
+    *   suppression du contenue de Snake.queue et Snake.bufferDir
+    *   reset des valeurs par defaut de Snake.direction, 
+    *       Snake.tailleQueue et score
+    *   
+    *   generation d'une nouvelle food
+    *   
+    *   Après 0.5s :
+    *     Si aucun menu n'est ouvert :
+    *       lancer la musique
+    * FIN
+    */
     mainTheme.pause();
     mainTheme.load();
     dieSound.play();
