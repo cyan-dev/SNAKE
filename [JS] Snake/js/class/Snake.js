@@ -60,6 +60,7 @@ function Snake(environement, cell) {
 
   /*
   * On précise à la cellule qu'elle contient le seprent
+  * FULINDRA TETE DE SNAKE
   */
   this.cell.setIsSnake(true);
   this.cell.setIsHead(true);
