@@ -1,7 +1,7 @@
 /***************************************************************
 * Fichier : game.js (main JS)
 * Projet  : [JS] Snake
-*
+* 
 * arborescence :
 * js
 * |- game.js *
@@ -53,7 +53,6 @@ var vitesse = [160, 100, 70];
 //------------------
 // MENUS
 
-
 //div dans laquelle se trouve le menu pause
 var pause = document.getElementById('pause');
 pause.hidden = true;  //Etat par defaut : caché
@@ -64,7 +63,6 @@ menu.hidden = false;   //Etat par defaut : caché
 
 //------------------
 // AUDIO
-
 
 //musique du jeu
 var btnMusic = document.getElementById('music');
@@ -82,7 +80,6 @@ dieSound.volume = 0.1;    //volume à 10% de base
 
 //------------------
 // INTERFACE DE SCORE
-
 
 //p d'affichage du score en cours
 var affichageScore = document.getElementById('scoreNumber');
@@ -168,7 +165,6 @@ food.generate();
 //On surveille un évenement "key down" (appuie sur une touche)
 document.onkeydown = function(e) {
 
-
   if(arrow.indexOf(e.key) > -1) {
     if(loop > 0) {
       snake.stockDir(arrow.indexOf(e.key));
@@ -229,7 +225,7 @@ document.onkeydown = function(e) {
 btnDifficulty.forEach(function(elt) {
   elt.onclick = function() {
     newDifficulty = arrayDifficulty.indexOf(this.id);
-    changeDisplayedDifficulty(this.id)
+    changeDisplayedDifficulty(this.id);
   }
 });
 

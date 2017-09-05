@@ -1,7 +1,7 @@
 /***************************************************************
 * Fichier : Snake.js (object declaration)
 * Projet  : [JS] Snake
-*
+* 
 * arborescence :
 * js
 * |- game.js
@@ -21,18 +21,18 @@
 function Snake(environement, cell) {
   /* 
   * Objet Snake
-  *
+  * 
   * Constructeur
   * Snake(environement : array of Cell object, cell : Cell object)
   *     : Snake object
-  *
+  * 
   * Methodes
   * Snake.stockDir(direction : int) : null
   * Snake.changeDir(null) : null
   * Snake.move(null) : null
   * Snake.addQueue(cell : Cell object) : null
   * Snake.restart(null) : null
-  *
+  * 
   * Attributs
   * Snake.environement : array of Cell object
   * Snake.cell : Cell object
@@ -40,7 +40,7 @@ function Snake(environement, cell) {
   * Snake.bufferDir : array of int
   * Snake.tailleQueue : int
   * Snake.queue : array of Cell object
-  *
+  * 
   * Using classes
   * Cell.js => Cell object
   */
@@ -103,16 +103,17 @@ function Snake(environement, cell) {
     * 
     * direction : int
     *   => bon bah c'est la direction quoi...
-    *
+    * 
     * return : undefined
     *   => aucun retour n'est spécifié
-    *
+    * 
     * Fonctionnement :
     * DEBUT
     *   Si la taille de Snake.bufferDir est inférieure à 2 :
     *     Snake.bufferDir prend direction en dernière valeur
     * FIN
     */
+
     if(this.bufferDir.length < 2) {
       this.bufferDir.push(direction);
     }
@@ -125,10 +126,10 @@ function Snake(environement, cell) {
     * 
     * param : undefined
     *   => aucun paramètre n'est spécifié
-    *
+    * 
     * return : undefined
     *   => aucun retour n'est spécifié
-    *
+    * 
     * fonctionnement :
     * DEBUT
     *   Si la taille de Snake.bufferDir est supérieure à 0 :
@@ -140,6 +141,7 @@ function Snake(environement, cell) {
     *       La première valeur de Snake.bufferDir est supprimé
     * FIN
     */
+
     if(this.bufferDir.length > 0) {
       if(this.bufferDir[0] - this.direction !== 2 
           && this.bufferDir[0] - this.direction !== -2) {
@@ -157,13 +159,12 @@ function Snake(environement, cell) {
     * 
     * param : undefined
     *   => aucun paramètre n'est spécifié
-    *
+    * 
     * return : undefined
     *   => aucun retour n'est spécifié
-    *
+    * 
     * fonctionnement :
     * DEBUT
-    *   Snake.cell n'est plus une cellule du snake
     *   Snake.cell n'est plus la tête du snake
     *   ajoute Snake.cell au tableau Snake.queue par le biais de 
     *       la methode Snake.addQueue(...)
@@ -181,7 +182,7 @@ function Snake(environement, cell) {
     *         la methode Snake.restart()
     *   Sinon :
     *     Snake.cell devient la tête du snake
-    *
+    * 
     *   actualisation de la grille
     * FIN
     */
@@ -273,7 +274,7 @@ function Snake(environement, cell) {
     * 
     * return : undefined
     *   => aucun retour n'est spécifié
-    *
+    * 
     * Fonctionnement :
     * DEBUT
     *   Si la taille de Snake.queue est supérieure ou égale 
@@ -285,6 +286,7 @@ function Snake(environement, cell) {
     *   cell devient une cellule de snake
     * FIN
     */
+
     if(this.queue.length >= this.tailleQueue) {
       this.queue[0].setIsSnake(false);
       this.queue.shift();
@@ -298,19 +300,18 @@ function Snake(environement, cell) {
   this.restart = function() {
     /*
     * Snake.restart(undefined) : undefined
-    *
+    * 
     * param : undefined
     *   => aucun paramètre n'est spécifié
-    *
+    * 
     * return : undefined
     *   => aucun retour n'est spécifié
-    *
+    * 
     * Fonctionnement :
     * DEBUT
     *   stope la musique
     *   joue le son de mort
     *   
-    *   Snake.cell n'est plus une cellule du snake
     *   Snake.cell n'est plus la tête du snake
     *   met le snake au centre de la grille
     *
@@ -336,6 +337,7 @@ function Snake(environement, cell) {
     *       lancer la musique
     * FIN
     */
+
     mainTheme.pause();
     mainTheme.load();
     dieSound.play();
@@ -374,6 +376,5 @@ function Snake(environement, cell) {
         mainTheme.play();
       }  
     }, 500);
-
   }
 }
