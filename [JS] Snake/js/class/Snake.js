@@ -60,11 +60,15 @@ function Snake(environement, cell) {
 
   /*
 <<<<<<< HEAD
+<<<<<<< HEAD
   * On précise à la cellule qu'elle contient la tête du seprent
 =======
   * On précise à la cellule qu'elle contient le seprent
   * FULINDRA TETE DE SNAKE
 >>>>>>> 5fef1b53cbd98f1fc69ebdb7436b20a33294bae0
+=======
+  * On précise à la cellule qu'elle contient le seprent
+>>>>>>> parent of 35216ec... corection commentary Snake.js
   */
   this.cell.setIsSnake(true);
   this.cell.setIsHead(true);
