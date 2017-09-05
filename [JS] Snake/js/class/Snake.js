@@ -23,7 +23,8 @@ function Snake(environement, cell) {
   * Objet Snake
   *
   * Constructeur
-  * Snake(environement : array of Cell object, cell : Cell object) : Snake object
+  * Snake(environement : array of Cell object, cell : Cell object)
+  *     : Snake object
   *
   * Methodes
   * Snake.stockDir(direction : int) : null
