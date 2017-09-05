@@ -59,7 +59,7 @@ function Snake(environement, cell) {
   this.cell = cell;
 
   /*
-  * On précise à la cellule qu'elle contient le seprent
+  * On précise à la cellule qu'elle contient la tête du seprent
   */
   this.cell.setIsSnake(true);
   this.cell.setIsHead(true);
