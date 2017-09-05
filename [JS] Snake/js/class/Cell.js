@@ -18,27 +18,26 @@
 ***************************************************************/
 "use strict";
 
-/* 
-* Objet Cell
-*
-* CONSTRUCTEUR
-* Cell(i : int, j : int) : Cell Object
-*  
-* ATTRIBUTS
-* Cell.i : int
-* Cell.j : int
-* Cell.isSnake : bool
-* Cell.isFood : bool
-* Cell.isHead : bool
-*
-* MÉTHODES
-* Cell.show(ctx : object, scl : int) : int
-* Cell.setIsSnake(isSnake : bool)
-* Cell.setIsHead(isHead : bool)
-* Cell.setIsFood(isFood : bool)
-*/
-
 function Cell(i, j) {
+  /* 
+  * Objet Cell
+  *
+  * CONSTRUCTEUR
+  * Cell(i : int, j : int) : Cell Object
+  *  
+  * ATTRIBUTS
+  * Cell.i : int
+  * Cell.j : int
+  * Cell.isSnake : bool
+  * Cell.isFood : bool
+  * Cell.isHead : bool
+  *
+  * MÉTHODES
+  * Cell.show(ctx : object, scl : int) : int
+  * Cell.setIsSnake(isSnake : bool)
+  * Cell.setIsHead(isHead : bool)
+  * Cell.setIsFood(isFood : bool)
+  */
 
 //------------------
 // ATTRIBUTS

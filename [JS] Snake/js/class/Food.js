@@ -18,21 +18,20 @@
 ***************************************************************/
 "use strict";
 
-/* 
-* Objet Food
-*
-* CONSTRUCTEUR
-* Food(environement : array of Cell object) : Food Object
-*  
-* ATTRIBUTS
-* Food.environement : array of Cell object
-* Food.cell : Cell object
-*
-* MÉTHODES
-* Food.generate(environement : array of Cell object) : undefined
-*/
-
 function Food(environement) {
+  /* 
+  * Objet Food
+  *
+  * CONSTRUCTEUR
+  * Food(environement : array of Cell object) : Food Object
+  *  
+  * ATTRIBUTS
+  * Food.environement : array of Cell object
+  * Food.cell : Cell object
+  *
+  * MÉTHODES
+  * Food.generate(environement : array of Cell object) : undefined
+  */
 
 //------------------
 // ATTRIBUTS
