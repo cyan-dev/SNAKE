@@ -45,8 +45,9 @@ function Snake(environement, cell) {
   * Cell.js => Cell object
   */
 
-//------------------
-// ATTRIBUTS
+//==============================
+//========  ATTRIBUTS  =========
+//==============================
 
   /*
   * Snake.environement correspond à la grille dans laquelle le serpent existe.
@@ -93,9 +94,9 @@ function Snake(environement, cell) {
   */
   this.queue = [];
 
-
-//------------------
-// METHODES
+//==============================
+//=========  METHODES  =========
+//==============================
 
   this.stockDir = function(direction) {
     /*

@@ -39,8 +39,9 @@ function Cell(i, j) {
   * Cell.setIsFood(isFood : bool)
   */
 
-//------------------
-// ATTRIBUTS
+//==============================
+//========  ATTRIBUTS  =========
+//==============================
 
   /*
   * Cell.i correspond aux coordonées i (horizontale) (unitée : case)
@@ -71,8 +72,9 @@ function Cell(i, j) {
   this.isHead = false;
 
 
-//------------------
-// MÉTHODES
+//==============================
+//=========  METHODES  =========
+//==============================
 
   this.show = function(ctx, scl) {  
     /*

@@ -33,8 +33,9 @@ function Food(environement) {
   * Food.generate(environement : array of Cell object) : undefined
   */
 
-//------------------
-// ATTRIBUTS
+//==============================
+//========  ATTRIBUTS  =========
+//==============================
   
   /*
   * Food.environement correspond à la grille dans laquelle la food existe.
@@ -47,8 +48,9 @@ function Food(environement) {
   this.cell;
 
 
-//------------------
-// METHODES
+//==============================
+//=========  METHODES  =========
+//==============================
   
   this.generate = function() {
     /*
