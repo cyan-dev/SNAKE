@@ -15,7 +15,7 @@
 * 
 * Dev.    : Cyril ESCLASSAN & Dylan CARON
 * Update  : 09/09/2017
-*   => Gestion de l'évènement onkeydown
+*   => Correction de bugs mineurs
 ***************************************************************/
 "use strict";
 
@@ -70,8 +70,8 @@ document.onkeydown = function(e) {
   /*
   * Gestion des déplacements
   */
-  if(keymap[e.key] && loop > 0) {
-    snake.stockDir(e.key);
+  if(keymap[e.key] !== undefined && loop > 0) {
+    snake.stockDir(keymap[e.key]);
   }
 
   /*
@@ -80,7 +80,7 @@ document.onkeydown = function(e) {
   * 
   * dif ++
   */
-  if(!menu.hidden && e.key === 'ArrowRight') {
+  if(!menu.hidden && keymap[e.key] === 0) {
     if(newDifficulty + 1 < arrayDifficulty.length) {
       newDifficulty += 1;
       changeDisplayedDifficulty(arrayDifficulty[newDifficulty]);
@@ -93,7 +93,7 @@ document.onkeydown = function(e) {
   /*
   * dif --
   */
-  if(!menu.hidden && e.key === 'ArrowLeft') {
+  if(!menu.hidden && keymap[e.key] === 2) {
     if(newDifficulty - 1 > -1) {
       newDifficulty -= 1;
       changeDisplayedDifficulty(arrayDifficulty[newDifficulty]);

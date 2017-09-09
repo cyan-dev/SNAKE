@@ -14,8 +14,8 @@
 * |  |- 2dArray.js
 * 
 * Dev.    : Cyril ESCLASSAN & Dylan CARON
-* Update  : 04/09/2017
-*   => Mise à jour du commentary général
+* Update  : 09/09/2017
+*   => décalage de la gestion des controles vers control.js
 ***************************************************************/
 "use strict";
 
@@ -171,66 +171,6 @@ var snake = new Snake(grid,
 
 var food = new Food(grid);
 food.generate();
-
-//On surveille un évenement "key down" (appuie sur une touche)
-document.onkeydown = function(e) {
-
-  if(arrow.indexOf(e.key) > -1) {
-    if(loop > 0) {
-      snake.stockDir(arrow.indexOf(e.key));
-    } else if(!menu.hidden && e.key === 'ArrowRight') {
-      if(newDifficulty + 1 < arrayDifficulty.length) {
-        newDifficulty += 1;
-        changeDisplayedDifficulty(arrayDifficulty[newDifficulty]);
-      } else {
-        newDifficulty = 0;
-        changeDisplayedDifficulty(arrayDifficulty[newDifficulty]);
-      }
-    } else if(!menu.hidden && e.key === 'ArrowLeft') {
-      if(newDifficulty - 1 > -1) {
-        newDifficulty -= 1;
-        changeDisplayedDifficulty(arrayDifficulty[newDifficulty]);
-      } else {
-        newDifficulty = arrayDifficulty.length - 1;
-        changeDisplayedDifficulty(arrayDifficulty[newDifficulty]);
-      }
-    }
-  }
-
-  if(e.key === ' ') {
-    if(pause.hidden && menu.hidden) {
-      clearInterval(loop);
-      mainTheme.pause();
-      shadow.hidden = false;
-      pause.hidden = false;
-
-      loop = 0;
-    } else {
-      mainTheme.play();
-      menu.hidden = true;
-      shadow.hidden = true;
-      pause.hidden = true;
-      loop = main(loop);
-    }
-  }
-
-  if(e.key === 'Enter') {
-    if(menu.hidden) {
-      clearInterval(loop);
-      mainTheme.pause();
-      menu.hidden = false;
-      shadow.hidden = false;
-      pause.hidden = true;
-      loop = 0;
-    } else {
-      shadow.hidden = true;
-      menu.hidden = true;
-      currentDifficulty = newDifficulty;
-      loop = main(loop);
-      snake.restart();
-    }
-  }
-}
 
 btnDifficulty.forEach(function(elt) {
   elt.onclick = function() {
