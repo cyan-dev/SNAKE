@@ -1,10 +1,11 @@
 /***************************************************************
-* Fichier : game.js (main JS)
+* Fichier : game.js (script JS)
 * Projet  : [JS] Snake
 * 
 * arborescence :
 * js
 * |- game.js *
+* |- control.js
 * |- class
 * |  |- Cell.js
 * |  |- Food.js
@@ -22,7 +23,27 @@
 //====  VARIABLES GLOBALES  ====
 //==============================
 
+//------------------
+// MENUS
+
+/*
+* Elt div Menu Pause
+*/
+var pause = document.getElementById('pause');
+pause.hidden = true;    //Etat par defaut : caché
+
+/*
+* Elt div Menu principal
+*/
+var menu = document.getElementById('menu');
+menu.hidden = false;   //Etat par defaut : caché
+
+/*
+* Element de gestion de l'ombre lors de l'ouverture des menus
+*/
 var shadow = document.getElementById('shadow');
+
+
 
 //dir dans laquelle se trouve la grille de jeu
 var game = document.getElementById('game');
@@ -40,7 +61,7 @@ var arrayDifficulty = [
   'hard'
 ];
 
-//spans de fiddicultées du gestionaire de difficultée dans le menu
+//spans de dificultées du gestionaire de difficultée dans le menu
 var easyDiff = document.getElementById('easy');       //easy
 var mediumDiff = document.getElementById('medium');   //medium
 var hardDiff = document.getElementById('hard');       //hard
@@ -49,17 +70,6 @@ var hardDiff = document.getElementById('hard');       //hard
 //1 actualisation toutes les 160/100/70 millisecondes
 //en fonction de la difficultée (var difficulty)
 var vitesse = [160, 100, 70];
-
-//------------------
-// MENUS
-
-//div dans laquelle se trouve le menu pause
-var pause = document.getElementById('pause');
-pause.hidden = true;  //Etat par defaut : caché
-
-//div dans laquelle se trouve le menu principal
-var menu = document.getElementById('menu');
-menu.hidden = false;   //Etat par defaut : caché
 
 //------------------
 // AUDIO

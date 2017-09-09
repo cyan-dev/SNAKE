@@ -5,6 +5,7 @@
 * arborescence :
 * js
 * |- game.js
+* |- control.js
 * |- class
 * |  |- Cell.js *
 * |  |- Food.js
