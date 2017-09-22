@@ -115,15 +115,6 @@ var cols, rows;
 //taille en longueur et largeur d'une cellule
 var scl = 40; //de base : 40px
 
-//tableau de comparaison pour les évenements "key down" 
-//sur les fleches directionelles
-var arrow = [
-    'ArrowLeft',
-    'ArrowUp',
-    'ArrowRight',
-    'ArrowDown'
-  ] 
-
 //var de stockage du score de la partie en cours
 var score = 0;
 
