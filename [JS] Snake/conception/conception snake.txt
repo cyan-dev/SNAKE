@@ -24,8 +24,7 @@ LE SERPENT EST ENTIER
     snake = {[cell = new cell(10x10)][cell = new cell(11x10)][cell(12x10)]}
 
 
-
-
+============================================================
 
 var taille = 3;
 var cell;
@@ -36,6 +35,12 @@ for(let i = 0; i < taille; i++) {
   snake.push(cell);
 }
 
+============================================================
 
+Modification apparence snake :
+  bleu fort, bleu faible 1/2
 
-  
+Scoreboard 
+  python cgi
+
+Mode arcade
